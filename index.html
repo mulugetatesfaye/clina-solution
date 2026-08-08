@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clina Solution | Innovative Software Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 3D Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="logo-3d">
+                <span class="logo-letter">C</span>
+                <span class="logo-letter">L</span>
+                <span class="logo-letter">I</span>
+                <span class="logo-letter">N</span>
+                <span class="logo-letter">A</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="logo-icon">
+                    <div class="logo-cube">
+                        <div class="cube-face front">C</div>
+                        <div class="cube-face back">S</div>
+                        <div class="cube-face right">L</div>
+                        <div class="cube-face left">N</div>
+                        <div class="cube-face top">A</div>
+                        <div class="cube-face bottom">S</div>
+                    </div>
+                </div>
+                <span class="logo-text">Clina<span>Solution</span></span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#contact" class="btn-primary">Get Started</a>
+                <button class="mobile-toggle" id="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-rocket"></i>
+                    <span>Transforming Ideas Into Digital Reality</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">We Build</span>
+                    <span class="title-line gradient-text">Future-Ready</span>
+                    <span class="title-line">Software</span>
+                </h1>
+                <p class="hero-description">
+                    Clina Solution is a cutting-edge software agency that transforms businesses through innovative 
+                    technology solutions. From web applications to mobile apps, AI integration to cloud architecture — 
+                    we craft digital experiences that drive growth.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary btn-large">
+                        <span>Start Your Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#portfolio" class="btn-secondary btn-large">
+                        <span>View Our Work</span>
+                        <i class="fas fa-play"></i>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="150">0</span>
+                        <span class="stat-label">Projects Delivered</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="25">0</span>
+                        <span class="stat-label">Team Members</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-3d">
+                <div class="floating-elements">
+                    <div class="float-card code-card">
+                        <div class="card-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <pre><code><span class="keyword">const</span> <span class="variable">solution</span> = <span class="keyword">new</span> <span class="class">ClinaSolution</span>({
+  <span class="property">innovation</span>: <span class="value">true</span>,
+  <span class="property">quality</span>: <span class="value">100</span>,
+  <span class="property">delivery</span>: <span class="value">'on-time'</span>
+});</code></pre>
+                    </div>
+                    <div class="float-card chart-card">
+                        <div class="chart-header">
+                            <h4>Project Growth</h4>
+                            <span class="chart-value">+127%</span>
+                        </div>
+                        <div class="chart-bars">
+                            <div class="bar" style="height: 30%"></div>
+                            <div class="bar" style="height: 45%"></div>
+                            <div class="bar" style="height: 60%"></div>
+                            <div class="bar" style="height: 75%"></div>
+                            <div class="bar" style="height: 90%"></div>
+                            <div class="bar" style="height: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="float-card tech-card">
+                        <div class="tech-icons">
+                            <i class="fab fa-react"></i>
+                            <i class="fab fa-node-js"></i>
+                            <i class="fab fa-python"></i>
+                            <i class="fab fa-aws"></i>
+                            <i class="fab fa-docker"></i>
+                            <i class="fab fa-figma"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">About Us</span>
+                <h2 class="section-title">Crafting Digital Excellence Since 2020</h2>
+                <p class="section-description">
+                    We're a team of passionate developers, designers, and strategists who believe in the power of 
+                    technology to transform businesses and improve lives.
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Who We Are</h3>
+                        <p>
+                            Clina Solution was founded with a simple yet powerful vision: to bridge the gap between 
+                            innovative technology and real-world business needs. Our team of 25+ experts combines 
+                            deep technical expertise with creative problem-solving to deliver solutions that don't 
+                            just work — they excel.
+                        </p>
+                        <p>
+                            From startups to enterprise organizations, we've helped over 50 clients across 15+ 
+                            industries achieve their digital transformation goals. Our approach is rooted in 
+                            collaboration, transparency, and an unwavering commitment to quality.
+                        </p>
+                    </div>
+                    <div class="about-values">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4>Innovation First</h4>
+                            <p>We stay ahead of the curve, leveraging the latest technologies and methodologies.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h4>Client Partnership</h4>
+                            <p>Your success is our success. We work as an extension of your team.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4>Quality Assured</h4>
+                            <p>Every line of code is tested, reviewed, and optimized for performance.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h4>On-Time Delivery</h4>
+                            <p>We respect deadlines and deliver projects on schedule, every time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="tech-stack-3d">
+                        <div class="tech-orbit">
+                            <div class="tech-center">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="orbit-ring ring-1">
+                                <div class="orbit-item"><i class="fab fa-react"></i></div>
+                                <div class="orbit-item"><i class="fab fa-vuejs"></i></div>
+                                <div class="orbit-item"><i class="fab fa-angular"></i></div>
+                                <div class="orbit-item"><i class="fab fa-node-js"></i></div>
+                            </div>
+                            <div class="orbit-ring ring-2">
+                                <div class="orbit-item"><i class="fab fa-python"></i></div>
+                                <div class="orbit-item"><i class="fab fa-java"></i></div>
+                                <div class="orbit-item"><i class="fab fa-golang"></i></div>
+                                <div class="orbit-item"><i class="fab fa-rust"></i></div>
+                                <div class="orbit-item"><i class="fab fa-aws"></i></div>
+                                <div class="orbit-item"><i class="fab fa-docker"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Our Services</span>
+                <h2 class="section-title">End-to-End Software Solutions</h2>
+                <p class="section-description">
+                    From concept to deployment, we provide comprehensive software development services 
+                    tailored to your unique business needs.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-tilt>
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="service-glow"></div>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom web applications built with modern frameworks like React, Next.js, and Vue.js. Scalable, performant, and beautifully designed.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Single Page Applications</li>
+                        <li><i class="fas fa-check"></i> Progressive Web Apps</li>
+                        <li><i class="fas fa-check"></i> E-commerce Platforms</li>
+                        <li><i class="fas fa-check"></i> CMS Development</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-tilt>
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="service-glow"></div>
+                    </div>
+                    <h3>Mobile Development</h3>
+                    <p>Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> React Native Apps</li>
+                        <li><i class="fas fa-check"></i> Flutter Development</li>
+                        <li><i class="fas fa-check"></i> Native iOS/Android</li>
+                        <li><i class="fas fa-check"></i> App Store Optimization</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-tilt>
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="service-glow"></div>
+                    </div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Intelligent solutions powered by artificial intelligence and machine learning to automate and optimize your business processes.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Predictive Analytics</li>
+                        <li><i class="fas fa-check"></i> Natural Language Processing</li>
+                        <li><i class="fas fa-check"></i> Computer Vision</li>
+                        <li><i class="fas fa-check"></i> Custom AI Models</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-tilt>
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="service-glow"></div>
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud infrastructure and migration services on AWS, Azure, and GCP to power your growing business.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Cloud Architecture</li>
+                        <li><i class="fas fa-check"></i> DevOps & CI/CD</li>
+                        <li><i class="fas fa-check"></i> Microservices</li>
+                        <li><i class="fas fa-check"></i> Serverless Computing</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-tilt>
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="service-glow"></div>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>User-centered design that creates intuitive, engaging digital experiences your customers will love.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> User Research & Testing</li>
+                        <li><i class="fas fa-check"></i> Wireframing & Prototyping</li>
+                        <li><i class="fas fa-check"></i> Visual Design Systems</li>
+                        <li><i class="fas fa-check"></i> Interaction Design</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-tilt>
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="service-glow"></div>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <p>Comprehensive security solutions to protect your digital assets and ensure compliance with industry standards.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Security Audits</li>
+                        <li><i class="fas fa-check"></i> Penetration Testing</li>
+                        <li><i class="fas fa-check"></i> Compliance Consulting</li>
+                        <li><i class="fas fa-check"></i> Incident Response</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Our Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">
+                    A showcase of our best work across various industries and technologies.
+                </p>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="cloud">Cloud</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card" data-category="web">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="portfolio-link"><i class="fas fa-heart"></i></a>
+                        </div>
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>E-Commerce Platform</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>ShopFlow E-Commerce</h4>
+                        <p>Full-stack e-commerce platform with AI-powered recommendations</p>
+                        <div class="portfolio-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="mobile">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="portfolio-link"><i class="fas fa-heart"></i></a>
+                        </div>
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-heartbeat"></i>
+                            <span>Health & Fitness App</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>VitalTrack Health</h4>
+                        <p>AI-powered health monitoring and fitness tracking application</p>
+                        <div class="portfolio-tags">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>TensorFlow</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="ai">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="portfolio-link"><i class="fas fa-heart"></i></a>
+                        </div>
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Analytics Dashboard</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>DataPulse Analytics</h4>
+                        <p>Real-time business intelligence dashboard with predictive analytics</p>
+                        <div class="portfolio-tags">
+                            <span>Python</span>
+                            <span>React</span>
+                            <span>ML</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="cloud">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="portfolio-link"><i class="fas fa-heart"></i></a>
+                        </div>
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-server"></i>
+                            <span>Cloud Infrastructure</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>CloudSync Platform</h4>
+                        <p>Scalable multi-tenant SaaS platform with auto-scaling infrastructure</p>
+                        <div class="portfolio-tags">
+                            <span>AWS</span>
+                            <span>Docker</span>
+                            <span>K8s</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="web">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="portfolio-link"><i class="fas fa-heart"></i></a>
+                        </div>
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Learning Platform</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>EduVerse LMS</h4>
+                        <p>Interactive learning management system with video streaming and assessments</p>
+                        <div class="portfolio-tags">
+                            <span>Next.js</span>
+                            <span>PostgreSQL</span>
+                            <span>WebRTC</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="mobile">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="portfolio-link"><i class="fas fa-heart"></i></a>
+                        </div>
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-utensils"></i>
+                            <span>Food Delivery App</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>FoodRush Delivery</h4>
+                        <p>Real-time food delivery app with live tracking and AI recommendations</p>
+                        <div class="portfolio-tags">
+                            <span>React Native</span>
+                            <span>GraphQL</span>
+                            <span>Maps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Our Team</span>
+                <h2 class="section-title">Meet the Experts</h2>
+                <p class="section-description">
+                    A talented team of developers, designers, and strategists passionate about building great software.
+                </p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="team-socials">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <h4>Alex Chen</h4>
+                    <span class="team-role">CEO & Founder</span>
+                    <p>Visionary leader with 10+ years in software engineering and business strategy.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                        <div class="team-socials">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <h4>Sarah Williams</h4>
+                    <span class="team-role">CTO</span>
+                    <p>Full-stack architect specializing in scalable distributed systems and cloud infrastructure.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user-ninja"></i>
+                        </div>
+                        <div class="team-socials">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                    <h4>Marcus Johnson</h4>
+                    <span class="team-role">Lead Designer</span>
+                    <p>Award-winning UI/UX designer creating intuitive and beautiful digital experiences.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <div class="team-socials">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-stack-overflow"></i></a>
+                        </div>
+                    </div>
+                    <h4>Priya Patel</h4>
+                    <span class="team-role">AI/ML Lead</span>
+                    <p>Machine learning expert building intelligent solutions that transform business operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Clina Solution transformed our entire digital infrastructure. Their team delivered a 
+                        scalable platform that handles millions of transactions daily. The quality of their 
+                        work and their commitment to our success is unmatched."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h5>James Mitchell</h5>
+                            <span>CEO, TechVentures Inc.</span>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Working with Clina Solution was a game-changer for our startup. They built our MVP 
+                        in record time and helped us secure our Series A funding. Their technical expertise 
+                        and business acumen are truly exceptional."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h5>Emily Rodriguez</h5>
+                            <span>Founder, GreenTech Solutions</span>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The AI-powered analytics dashboard Clina Solution built for us has increased our 
+                        operational efficiency by 40%. Their team's deep understanding of both technology 
+                        and business needs makes them an invaluable partner."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h5>David Kim</h5>
+                            <span>COO, DataDriven Corp</span>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <button class="dot active" data-index="0"></button>
+                <button class="dot" data-index="1"></button>
+                <button class="dot" data-index="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Let's Build Something Amazing Together</h2>
+                    <p class="contact-description">
+                        Ready to transform your business with innovative software solutions? 
+                        Let's discuss your project and explore how we can help.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email Us</h4>
+                                <p>hello@clinasolution.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Call Us</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Visit Us</h4>
+                                <p>123 Innovation Drive, Tech City, TC 12345</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="form-group">
+                            <select id="service">
+                                <option value="" disabled selected>Select a Service</option>
+                                <option value="web">Web Development</option>
+                                <option value="mobile">Mobile Development</option>
+                                <option value="ai">AI & Machine Learning</option>
+                                <option value="cloud">Cloud Solutions</option>
+                                <option value="design">UI/UX Design</option>
+                                <option value="security">Cybersecurity</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-text">Clina<span>Solution</span></span>
+                    </a>
+                    <p>Transforming businesses through innovative software solutions. Your trusted technology partner since 2020.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Mobile Development</a></li>
+                        <li><a href="#services">AI & Machine Learning</a></li>
+                        <li><a href="#services">Cloud Solutions</a></li>
+                        <li><a href="#services">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest news and insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Clina Solution. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
