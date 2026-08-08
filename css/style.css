@@ -403,25 +403,30 @@ select, input, textarea { font-family: inherit; }
 .header__menu-toggle {
     display: none;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
-    padding: 8px;
+    padding: 10px;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .header__menu-toggle span {
     display: block;
-    width: 22px;
-    height: 1.5px;
+    width: 24px;
+    height: 2px;
     background: var(--color-fg);
     transition: all var(--duration-fast) var(--ease-out);
     transform-origin: center;
+    border-radius: 1px;
 }
 
 .header__menu-toggle.active span:first-child {
-    transform: rotate(45deg) translate(4px, 4px);
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
 .header__menu-toggle.active span:last-child {
-    transform: rotate(-45deg) translate(4px, -4px);
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Mobile Nav */
@@ -1779,6 +1784,161 @@ select, input, textarea { font-family: inherit; }
     border-color: var(--color-accent);
     color: var(--color-accent);
     transform: translateY(-2px);
+}
+
+/* ============================================
+   MOBILE RESPONSIVE FIXES
+   ============================================ */
+
+/* Reduce section padding on mobile */
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 80px;
+    }
+
+    /* Hero adjustments */
+    .hero {
+        padding: 100px 0 60px;
+        min-height: auto;
+    }
+    .hero__scroll {
+        bottom: 20px;
+    }
+    .hero__description {
+        font-size: 1rem;
+    }
+
+    /* Services - better spacing */
+    .service-item {
+        padding: var(--space-lg);
+    }
+
+    /* Work cards - better touch area */
+    .work-card {
+        padding: var(--space-lg);
+    }
+
+    /* Process steps - better padding */
+    .process-step {
+        padding: var(--space-lg);
+    }
+
+    /* About stats - single column on very small */
+    .about__stats {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact form - better spacing */
+    .contact {
+        padding: var(--section-padding) 0;
+    }
+
+    /* CTA - reduce padding */
+    .cta {
+        padding: var(--space-4xl) 0;
+    }
+    .cta::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    /* Footer - single column */
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    /* Testimonial dots - bigger touch targets */
+    .testimonial-nav__dot {
+        width: 12px;
+        height: 12px;
+    }
+    .testimonial-nav {
+        gap: var(--space-lg);
+    }
+
+    /* Mobile nav panel - better UX */
+    .mobile-nav__panel {
+        padding: 90px 32px 32px;
+    }
+    .mobile-nav__link {
+        font-size: 1.3rem;
+        padding: 12px 0;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+    }
+    .mobile-nav__cta {
+        padding: 14px 0;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        font-size: 1.05rem;
+    }
+
+    /* Back to top - better position */
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    /* Section headers - better spacing */
+    .section-header {
+        margin-bottom: var(--space-2xl);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --section-padding: 64px;
+    }
+
+    .hero {
+        padding: 90px 0 50px;
+    }
+    .hero__title > span {
+        font-size: 1.8rem;
+    }
+    .hero__actions {
+        flex-direction: column;
+    }
+    .hero__actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cta {
+        padding: var(--space-3xl) 0;
+    }
+    .cta__title {
+        font-size: 2rem;
+    }
+    .cta__actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cta__actions .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+    .footer__legal {
+        justify-content: center;
+    }
+
+    .stat__number {
+        font-size: 2rem;
+    }
+
+    .mobile-nav__panel {
+        width: 100vw;
+        max-width: 100vw;
+    }
 }
 
 /* ============================================
