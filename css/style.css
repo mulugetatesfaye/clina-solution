@@ -349,7 +349,7 @@ select, input, textarea { font-family: inherit; }
 }
 
 .header__logo-img {
-    height: 48px;
+    height: 56px;
     width: auto;
     object-fit: contain;
 }
