@@ -75,7 +75,7 @@ class ThreeScene {
         // Central icosahedron — the "digital core"
         const geometry = new THREE.IcosahedronGeometry(3, 1);
         const material = new THREE.MeshBasicMaterial({
-            color: 0xC8FF2E,
+            color: 0xFFB830,
             wireframe: true,
             transparent: true,
             opacity: 0.12
@@ -87,7 +87,7 @@ class ThreeScene {
         // Inner solid core
         const innerGeo = new THREE.IcosahedronGeometry(1.5, 0);
         const innerMat = new THREE.MeshBasicMaterial({
-            color: 0xC8FF2E,
+            color: 0xFFB830,
             transparent: true,
             opacity: 0.03
         });
@@ -106,11 +106,11 @@ class ThreeScene {
             positions[i * 3 + 1] = (Math.random() - 0.5) * 100;
             positions[i * 3 + 2] = (Math.random() - 0.5) * 60 - 10;
 
-            // Accent color with variation
+            // Accent color with variation (orange)
             const brightness = 0.3 + Math.random() * 0.7;
-            colors[i * 3] = 0.78 * brightness;     // R
-            colors[i * 3 + 1] = 1.0 * brightness;   // G
-            colors[i * 3 + 2] = 0.18 * brightness;  // B
+            colors[i * 3] = 1.0 * brightness;       // R
+            colors[i * 3 + 1] = 0.72 * brightness;  // G
+            colors[i * 3 + 2] = 0.19 * brightness;  // B
         }
 
         geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
@@ -135,7 +135,7 @@ class ThreeScene {
             const radius = 5 + i * 2.5;
             const geometry = new THREE.TorusGeometry(radius, 0.02, 8, 80);
             const material = new THREE.MeshBasicMaterial({
-                color: 0xC8FF2E,
+                color: 0xFFB830,
                 transparent: true,
                 opacity: 0.04 + i * 0.01
             });

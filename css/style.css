@@ -17,9 +17,9 @@
     --color-fg-muted: #A1A1AA;
     --color-fg-subtle: #71717A;
 
-    --color-accent: #C8FF2E;
-    --color-accent-dim: rgba(200, 255, 46, 0.08);
-    --color-accent-glow: rgba(200, 255, 46, 0.15);
+    --color-accent: #FFB830;
+    --color-accent-dim: rgba(255, 184, 48, 0.08);
+    --color-accent-glow: rgba(255, 184, 48, 0.15);
 
     /* Typography */
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -269,7 +269,7 @@ select, input, textarea { font-family: inherit; }
 }
 
 .btn--primary:hover {
-    background: #D4FF5A;
+    background: #FFC95C;
     transform: translateY(-1px);
     box-shadow: 0 4px 24px var(--color-accent-glow);
 }
@@ -349,7 +349,7 @@ select, input, textarea { font-family: inherit; }
 }
 
 .header__logo-img {
-    height: 36px;
+    height: 48px;
     width: auto;
     object-fit: contain;
 }
@@ -1617,7 +1617,7 @@ select, input, textarea { font-family: inherit; }
 }
 
 .footer__logo-img {
-    height: 32px;
+    height: 40px;
     width: auto;
     object-fit: contain;
 }
@@ -1697,7 +1697,7 @@ select, input, textarea { font-family: inherit; }
 }
 
 .footer__form button:hover {
-    background: #D4FF5A;
+    background: #FFC95C;
 }
 
 .footer__bottom {
